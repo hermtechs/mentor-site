@@ -33,7 +33,8 @@ header{
     right: 0;
     /* background: #1d2e3b; */
     /* background: #0f0f0f; */
-    background: #140a70;;
+    background: #140a70;
+    z-index: 1000;
 }
 nav{
     display: flex;
@@ -136,7 +137,6 @@ nav h3{
 }
 /* end of navigation */
 
-
 /* landing-page start */
 .landing-page{
     display: grid;
@@ -213,8 +213,9 @@ justify-content: center;
 justify-items: center;
 gap: 0.2rem;
 background: #ececef;
+position: relative;
 }
-.section-intro .small-title{
+ .small-title{
     text-align: center;
     text-transform: uppercase;
     margin-top: 0;
@@ -225,20 +226,15 @@ background: #ececef;
     line-height: 120%;
     color: #0c38e5;
 }
-.section-intro .intro-title{
-    max-width: 700px;
+ .intro-title{
     font-family: Gt america extended,sans-serif;
-    font-size: clamp(1.5rem, 10vw, 3rem); 
+    /* font-size: clamp(1.5rem, 10vw, 3rem);  */
+    font-size: clamp(1rem, 8vw, 2rem); 
     font-weight: 700;
-    line-height: 120%;
-}
-.section-intro .intro-title{
-    max-width: 800px;
+    line-height: 1.2;
     margin-left: auto;
     margin-right: auto;
-    font-size: clamp(1rem, 8vw, 2rem); 
-    line-height: 1.2;
-    display: block;
+    max-width: 800px;
 }
 .section-intro .intro-paragraph{
     max-width: 600px;
@@ -251,7 +247,8 @@ background: #ececef;
     margin-bottom: 0.8rem;
 }
 .grow-your-career-btn{
-    display: inline-block;
+    position: relative;
+    /* display: inline-block; */
     transform: skewX(-182deg);
     max-width: 250px;
 }
@@ -291,6 +288,50 @@ background: #ececef;
 }
 
 /* SERVICES SECTION */
+.our-services{
+    display: grid;
+    justify-content: center;
+    justify-items: center; 
+}
+.services-container{
+    display: flex;
+    justify-content: center;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+.section-heading{
+text-transform: uppercase;
+color: #0c38e5;
+}
+.service-get-started-btn{
+    color: #fff;
+    /* background: #0c38e5; */
+    margin-top: 1rem;
+    background: linear-gradient(#0c38e5,#57b7dd);
+    padding: 0.2rem 1rem;
+    border-radius: 0.2rem;
+}
+.service{
+    max-width: 380px;
+    /* background: #eee; */
+    /* color: #fff; */
+    margin: 1.5rem 0.5rem;
+    padding: 2rem 2.1rem;
+    line-height: 1.5rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+}
+.service-title{
+    text-align: center;
+    padding: 0.1rem 0.2rem 0.8rem 0.2rem;
+    color: #0c38e5;
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+/* SERVICES END */
 /* media queries */
 @media(max-width:800px){
     .nav-links{
