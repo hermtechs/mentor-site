@@ -24,6 +24,10 @@ section{
 section:nth-of-type(1){
     padding: 0.1rem 1rem;
 }
+.color-accent{
+    color: #4bf248;
+    font-weight: bolder;
+}
 /*start of navigation */
 header{
     position: sticky;
@@ -295,8 +299,10 @@ position: relative;
 }
 .services-container{
     display: flex;
+    justify-items: center;
     justify-content: center;
     /* flex-direction: column; */
+    align-items: center;
     flex-wrap: wrap;
     gap: 0.5rem;
 }
@@ -311,9 +317,18 @@ color: #0c38e5;
     background: linear-gradient(#0c38e5,#57b7dd);
     padding: 0.2rem 1rem;
     border-radius: 0.2rem;
+    display: block;
+    max-height: 34px;
+    transition: 200ms ease-in;
 }
+.service-get-started-btn:hover{
+    opacity: 0.8;
+    max-height: 35px;
+}
+
 .service{
     max-width: 380px;
+    min-height: 500px;
     /* background: #eee; */
     /* color: #fff; */
     margin: 1.5rem 0.5rem;
@@ -323,6 +338,10 @@ color: #0c38e5;
     display: grid;
     justify-items: center;
     justify-content: center;
+}
+.service p{
+    margin-top: 0.8rem;
+    padding: 0.1rem;
 }
 .service-title{
     text-align: center;
