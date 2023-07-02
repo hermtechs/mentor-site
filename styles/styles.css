@@ -302,7 +302,7 @@ position: relative;
     justify-items: center;
     justify-content: center;
     /* flex-direction: column; */
-    align-items: center;
+    /* align-items: center; */
     flex-wrap: wrap;
     gap: 0.5rem;
 }
@@ -351,6 +351,43 @@ color: #0c38e5;
     font-size: 1.3rem;
 }
 /* SERVICES END */
+
+/* ABOUT ME SCTION START */
+/* Container needed to position the button. Adjust the width as needed */
+.video-container {
+    position: relative;
+    /* width: 50%; */
+    max-width: 100%;
+  }
+  
+  /* Make the image responsive */
+  .video-container img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Style the button and place it in the middle of the container/image */
+  .video-container .btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 0.9rem 1.3rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    opacity: 0.7;
+    transition: 100ms ease-in;
+  }
+  
+  .video-container .btn:hover {
+    opacity: 0.9;
+  }
+
+/* ABOUT US SECTION END */
+
 
 /* EBOOK SECTION START */
 .ebook-section .small-title{
@@ -402,7 +439,7 @@ color: #0c38e5;
     border-radius: 0.2rem;
     transition: 200ms ease-in-out;
 }
-.purchase-ebook-items a:hover{
+.purchase-ebook-items a:hover, .after-txt-btn:hover{
     opacity: 0.9;
 }
 .purchase-ebook-items span{
@@ -410,6 +447,13 @@ color: #0c38e5;
     color: #57b7dd;
     font-weight: bolder;
     user-select: none;
+}
+.after-txt-btn{
+    background: linear-gradient(#0c38e5,#57b7dd);
+    padding: 0.3rem 1rem;
+    border-radius: 0.2rem;
+    transition: 200ms ease-in-out;
+    max-width: 120px;
 }
     
 /* END OF EBOOK SECTION  */
