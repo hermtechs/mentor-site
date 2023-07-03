@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.rawgit.com/JacobLett/bootstrap4-latest/master/bootstrap-4-latest.min.css">
     <link rel="stylesheet" href="styles/styles.css">
     <title>Cyber Security Academy</title>
 </head>
@@ -38,6 +37,26 @@
                </div>  
         </div>
     </header>
+    
+        <!-- video-modal container -->
+            <!-- Modal -->
+            <div class="modal fade video-popup-container{" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                <div class="modal-content">     
+                <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>        
+                        <!-- 16:9 aspect ratio -->
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                <!-- video-modal-container -->
+
     <main>
         <section class="landing-page">
             <div class="txt landing-page-txt">
@@ -62,13 +81,15 @@
              <a href="#" class="call-to-action grow-your-career-btn">Grow Your Career Today</a>   
         </section>
 
+
             <section class="ebook-section landing-page about-us video-intro">
                 <div class="video-container">
                     <img src="./imgs/1680793000-video-thumbnail.avif" class="thumbnail-image" alt="">  
                     <!-- <button class="btn">Button</button> -->
-                   <div class="btn">
+                   <div  class="btn  video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/NFWSFbqL0A0" data-target="#myModal" >
                       <svg xmlns="http://www.w3.org/2000/svg" height="1.25em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#0150ef}</style><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg>
                    </div> 
+
                   </div>
                 <div class="about-ebook-txt">
                     <!-- <p class="small-title">10 Years in One Book</p> -->
@@ -102,7 +123,7 @@
                         In today’s world what makes you competitive is a resume with the right keywords and phrases on it. </p>
                     <p>We can help you accomplish this as well as show you what strategies will
                          make you appear at the top of search results when employers are looking for candidates.</p>    
-    
+                         <a href="#" class="service-get-started-btn">Get Started</a>
                   </div>  
                   <div class="service">
                     <h3 class="service-title">Overemployed (Job Polygamy) Coaching</h3>
@@ -160,5 +181,8 @@
         </section>
     </main>
 
+    
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+<script src="https://cdn.rawgit.com/JacobLett/bootstrap4-latest/master/bootstrap-4-latest.min.js"></script>
     <script src="scripts/index.js"></script>
     </body>
