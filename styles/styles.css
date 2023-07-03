@@ -390,7 +390,7 @@ font-size: 1.6rem;
 /* video-popup */
 .modal-dialog {
     max-width: 800px;
-    margin-top: 6rem;
+    margin: 10rem auto;
 }
 .modal-body {
 position:relative;
