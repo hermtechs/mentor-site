@@ -722,7 +722,7 @@ background-size: cover;
       border-right-color: initial;
       border-bottom-width: 1.8px;
       border-bottom-style: solid;
-      border-bottom-color: #0c38e5;
+      border-bottom-color: #050942;
     }
   
     .contact_us_green .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-5.wk-ipadp-10 {
@@ -1124,3 +1124,26 @@ button:hover {
     cursor: pointer;
 }
 /* telephone input */
+.contact-us-overlay{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left:0;
+  overflow: scroll;
+  height: 100%;
+  /* margin: 1.5rem; */
+}
+.contact-us-overlay .contact_us_green{
+  /* opacity: 0.96; */
+  /* padding: 0.8rem; */
+  
+}
+.contact-us-overlay .contact_us_green .line {
+ border: none;
+}
+.close-overlay{
+  margin: 2rem;
+  position: relative;
+  left: 80%;
+}
