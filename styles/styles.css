@@ -10,6 +10,7 @@ img{
 a{
     text-decoration: none !important;
     color: #fff !important;
+    cursor: pointer;
 }
 a:hover, .btn:hover{
     text-decoration: none !important;
@@ -1132,10 +1133,11 @@ button:hover {
   left:0;
   overflow: scroll;
   height: 100%;
+  transform: translateY(100%);
   /* margin: 1.5rem; */
 }
 .contact-us-overlay .contact_us_green{
-  /* opacity: 0.96; */
+  opacity: 0.96;
   /* padding: 0.8rem; */
   
 }
