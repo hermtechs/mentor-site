@@ -1145,5 +1145,18 @@ button:hover {
 .close-overlay{
   margin: 2rem;
   position: relative;
-  left: 80%;
+  left: 78%;
+  color: #fff;
+  background: #357EBD;
+  max-width: 80px;
+  padding: 0.1rem;
+  text-align: center;
+  border-radius: 0.2rem;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+  transition:  300ms ease-in;
+}
+.close-overlay:hover{
+  opacity: 0.9;
 }

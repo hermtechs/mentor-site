@@ -3,6 +3,8 @@
 const navbars = document.querySelector(".nav-bars");
 const smallLinksContainer = document.querySelector(".side-menu-links");
 const sideMenulinks = document.querySelectorAll(".side-links a");
+const closeOverlayBtn = document.querySelector('.close-overlay');
+const overlay = document.querySelector('.contact-us-overlay')
 
 navbars.addEventListener("click", () => {
   if (navbars.classList.contains("rotate")) {
@@ -51,3 +53,8 @@ $('#myModal').on('hide.bs.modal', function (e) {
 
 // document ready  
 });
+
+//close overlay
+closeOverlayBtn.addEventListener('click', ()=>{
+  overlay.style.transform = "translateY(100%)"
+})
