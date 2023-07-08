@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a class="open-popup-link" href="#">Watch the Video</a>
+
+
+
+  <style>
+.vimeo-shadowbox {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.7);
+  transition: all 0.5s ease;
+}
+.vimeo-shadowbox--hidden {
+  opacity: 0;
+  z-index: -1000;
+  visibility: hidden;
+  pointer-events: none;
+}
+.vimeo-shadowbox__video-wrapper {
+  position: fixed;
+  width: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 640px;
+}
+.vimeo-shadowbox__video {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+.vimeo-shadowbox__video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.vimeo-shadowbox__close-button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  position: absolute;
+  right: -15px;
+  top: -15px;
+  overflow: hidden;
+  text-indent: -9999em;
+  background: #000;
+}
+  </style>
+  <script src="https://player.vimeo.com/api/player.js"></script>
+  <script>
+'use strict';
+
+//https://github.com/vimeo/player.js - documentation
+
+let iframe = document.querySelector('iframe');
+let player = new Vimeo.Player(iframe);
+let link = document.querySelector('.open-popup-link');
+let shadowbox = document.querySelector('.vimeo-shadowbox');
+let closeButton = document.querySelector('.vimeo-shadowbox__close-button');
+
+player.on('ended', function() {
+  hidePopup();
+});
+
+link.addEventListener('click', showPopup);
+shadowbox.addEventListener('click', hidePopup);
+closeButton.addEventListener('click', hidePopup);
+
+function showPopup() {
+  player.play();
+  shadowbox.classList.remove('vimeo-shadowbox--hidden');
+}
+function hidePopup() {
+  player.pause();
+  shadowbox.classList.add('vimeo-shadowbox--hidden');
+}
+
+
+
+  </script>
+</body>
+</html>

@@ -21,9 +21,9 @@
             </div>  
             <div class="nav-links">
              <div class="links">
-                <a href="#">About Us</a>
-                <a href="#">Book Appointment</a>
-                <a href="#">Purchase Ebook</a>
+                <a href="#about-us">About Us</a>
+                <a id="open-contact-us">Book Appointment</a>
+                <!-- <a href="#">Purchase Ebook</a> -->
              </div>  
              <a class="call-to-action" id="open-contact-us">GET STARTED </a> 
             </div>  
@@ -39,24 +39,18 @@
                </div>  
         </div>
     </header>
-        <!-- video-modal container -->
-            <!-- Modal -->
-            <div class="modal fade video-popup-container{" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                <div class="modal-content">     
-                <div class="modal-body">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-                </button>        
-                        <!-- 16:9 aspect ratio -->
-                <div class="embed-responsive embed-responsive-16by9">
-                  <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
-                </div>
-                </div>
-                </div>
-                </div>
-                </div>
-         <!-- video-modal-container -->
+       <!-- video iframe & popup container -->
+       <div class="vimeo-shadowbox vimeo-shadowbox--hidden">
+        <div class="vimeo-shadowbox__video-wrapper">
+          <div class="vimeo-shadowbox__video">
+              <iframe src="https://player.vimeo.com/video/76979871" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>  
+          </div>
+          <a class="vimeo-shadowbox__close-button" href="#">Close</a>
+        </div>
+      </div>
+       <!-- video iframe & popup container -->
+
+      
 
     <main>
         <section class="landing-page">
@@ -87,14 +81,14 @@
                 <div class="video-container">
                     <img src="./imgs/1680793000-video-thumbnail.avif" class="thumbnail-image" alt="">  
                     <!-- <button class="btn">Button</button> -->
-                   <div  class="btn  video-btn" data-toggle="modal" data-src="https://player.vimeo.com/video/58385453?badge=0&autoplay=1&loop=1" data-target="#myModal" >
+                   <div  class="btn  video-btn open-popup-link"  >
                       <svg xmlns="http://www.w3.org/2000/svg" height="1.25em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#0150ef}</style><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg>
                    </div> 
 
                   </div>
                 <div class="about-ebook-txt">
                     <!-- <p class="small-title">10 Years in One Book</p> -->
-                    <h2 class="big-title">About Us</h2>
+                    <h2 class="big-title" id="about-us">About Us</h2>
                     <p>Welcome to Info Sec Sages, your trusted partner in guiding and empowering individuals to pursue successful careers in the ever-evolving field of cybersecurity. With our comprehensive mentorship programs, we aim to bridge the knowledge gap and provide valuable guidance to aspiring cyber professionals. </p>
                     <p>At Info Sec Sages, we understand that cybersecurity is more than just a job; it's a calling. Our team of experienced industry professionals shares a deep passion for safeguarding digital landscapes and combating emerging threats. We believe that by fostering a supportive learning environment and providing personalized mentorship, we can shape the next generation of cybersecurity leaders. </p>
                     <p>Our mentorship programs are carefully crafted to cater to individuals at various stages of their cybersecurity journey. Whether you're a beginner looking to explore this exciting field or an experienced professional seeking advanced guidance, our mentors will work closely with you to assess your goals, identify knowledge gaps, and create a tailored roadmap for your success. </p>
@@ -145,21 +139,20 @@
                          Lastly, we can talk also about how to get an apartment long term or housing in whichever country you decide to choose.</p>  
                           <a  class="service-get-started-btn" id="open-contact-us">Get Started</a>
                   </div>  
-                <div class="service">
+                <!-- <div class="service">
                     <h3 class="service-title">Free Ebook</h3>
                     <p> Been on a few interviews and didn’t succeed? Or never been on an interview for an IT role. If you need assistance
                          for a help desk (for entry level) or cyber security role we can be of assistance.</p>
                         <p>  We will not only give you tips on the interviewing but also a mock interview with typical questions asked 
                             from a help desk to cyber security job. We can help coach you through your interview.</p>
                           <a  class="service-get-started-btn" id="open-contact-us">Get Started</a>
-                  </div>
+                  </div> -->
                   <div class="service">
                     <h3 class="service-title">Prepare for Cyebersecurity Certifications</h3>
-                    <p> Been on a few interviews and didn’t succeed? Or never been on an interview for an IT role. If you need assistance
-                         for a help desk (for entry level) or cyber security role we can be of assistance.</p>
-                        <p>  We will not only give you tips on the interviewing but also a mock interview with typical questions 
-                            asked from a help desk to cyber security job. We can help coach you through your interview.</p>
-                          <a  class="service-get-started-btn" id="open-contact-us">Get Started</a>
+                   <p>Our industry-leading experts will guide you personally, providing the knowledge and skills you need to succeed.
+                     With a tailored curriculum, and real-world case studies, you'll gain the confidence to ace your certification exams and
+                      stand out in this competitive field.
+                     Invest in your future today and excel in your cybersecurity career like never before. </p>
                   </div>    
             </div>   
         </section>
@@ -189,7 +182,7 @@
                 <div class="container-block form-wrapper">
                   <div class="head-text-box">
                     <p class="text-blk contactus-head">
-                      Contact us
+                      Talk to your mentor
                     </p>
                     <p class="text-blk contactus-subhead">
                       Fill in your contact information and we will be in touch
@@ -241,7 +234,7 @@
               <div class="container-box">
                 <div class="text-content">
                   <p class="text-blk contactus-head">
-                    Contact us
+                    Talk to your mentor
                   </p>
                   <p class="text-blk contactus-subhead">
                     Fill in your contact information and we will be in touch
@@ -258,7 +251,7 @@
                     <div class="address text-box">
                       <img class="contact-svg" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ET22.jpg">
                       <p class="contact-text">
-                        hello@cybersecacademy.com
+                        contact@infosecsages.com
                       </p>
                     </div>
                   </div>
@@ -283,7 +276,7 @@
 
                   <div class="head-text-box">
                     <p class="text-blk contactus-head">
-                      Talk to an expert
+                      Talk to your mentor
                     </p>
                     <p class="text-blk contactus-subhead">
                      Fill in your contact information and we will be in touch
@@ -307,6 +300,12 @@
                         Email *
                       </p>
                       <input required class="input" id="ipmgh-6" name="Email">
+                    </div>
+                    <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
+                      <p class="text-blk input-title">
+                        Best date & time to call *
+                      </p>
+                      <input required class="input" id="ipmgh-6" name="Call Time" type="datetime-local">
                     </div>
                     <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
                       <p class="text-blk input-title">
@@ -339,16 +338,15 @@
 
 <footer>
   <div class="links">
-    <a href="#">About us</a>
-    <a href="#">Terms & Conditions</a>
-    <a href="#">Privacy Policy</a>
-    <a href="#">Disclaimer</a>
-    <a href="#">Contact us</a>
+    <a href="#about">About us</a>
+    <!-- <a href="#">Terms & Conditions</a> -->
+    <!-- <a href="#">Privacy Policy</a> -->
+    <!-- <a href="#">Disclaimer</a> -->
+    <a id="open-contact-us">Contact us</a>
   </div>  
-    <p class="copyright-text">&copy; 2023 All Rights Reserved, Cybersec Academy</p>
-</footer>    
-<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
-<script src="https://cdn.rawgit.com/JacobLett/bootstrap4-latest/master/bootstrap-4-latest.min.js"></script>    
+    <p class="copyright-text">&copy; 2023 All Rights Reserved, Infosec Sages</p>
+</footer>     
+<script src="https://player.vimeo.com/api/player.js"></script>
 <script src="scripts/index.js"></script>
 <script src="international-telephone-input.js"></script>
     </body>
