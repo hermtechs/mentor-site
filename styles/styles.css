@@ -241,12 +241,13 @@ position: relative;
  .intro-title{
     font-family: Gt america extended,sans-serif;
     /* font-size: clamp(1.5rem, 10vw, 3rem);  */
-    font-size: clamp(1rem, 8vw, 2rem); 
+    font-size: clamp(1rem, 8vw, 1.5rem); 
     font-weight: 700;
     line-height: 1.2;
     margin-left: auto;
     margin-right: auto;
     max-width: 800px;
+    text-align: start;
 }
 .section-intro .intro-paragraph{
     max-width: 600px;
@@ -257,6 +258,7 @@ position: relative;
     line-height: 1.2;
     margin-top: 0.8rem;
     margin-bottom: 0.8rem;
+    text-align: start;
 }
 .grow-your-career-btn{
     position: relative;
