@@ -13,6 +13,10 @@ html{
   margin-left: 2.5rem;
 
 }
+.seo-keywords{
+  opacity: 0;
+  font-size: 0.1rem;
+}
 img{
     max-width: 100%;
 }
