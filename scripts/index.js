@@ -24,29 +24,28 @@ sideMenulinks.forEach((link) =>
   })
 );
 
-let iframe = document.querySelector('iframe');
+let iframe = document.querySelector("iframe");
 let player = new Vimeo.Player(iframe);
-let link = document.querySelector('.open-popup-link');
-let shadowbox = document.querySelector('.vimeo-shadowbox');
-let closeButton = document.querySelector('.vimeo-shadowbox__close-button');
+let link = document.querySelector(".open-popup-link");
+let shadowbox = document.querySelector(".vimeo-shadowbox");
+let closeButton = document.querySelector(".vimeo-shadowbox__close-button");
 
-player.on('ended', function() {
+player.on("ended", function () {
   hidePopup();
 });
 
-link.addEventListener('click', showPopup);
-shadowbox.addEventListener('click', hidePopup);
-closeButton.addEventListener('click', hidePopup);
+link.addEventListener("click", showPopup);
+shadowbox.addEventListener("click", hidePopup);
+closeButton.addEventListener("click", hidePopup);
 
 function showPopup() {
   player.play();
-  shadowbox.classList.remove('vimeo-shadowbox--hidden');
+  shadowbox.classList.remove("vimeo-shadowbox--hidden");
 }
 function hidePopup() {
   player.pause();
-  shadowbox.classList.add('vimeo-shadowbox--hidden');
+  shadowbox.classList.add("vimeo-shadowbox--hidden");
 }
-
 
 //close overlay
 closeOverlayBtn.addEventListener("click", () => {
@@ -65,3 +64,14 @@ function openAndCloseOverlay() {
     ? (overlay.style.transform = "translateY(0%)")
     : (overlay.style.transform = "translateY(100%)");
 }
+
+// clear all forms after loading the site
+// const forms = document.querySelectorAll("form");
+// forms.forEach((form) =>
+//   form.addEventListener("submit", () => {
+//     form.reset();
+//   })
+// );
+document.addEventListener("DOMContentLoaded", () => {
+  forms.forEach((form) => form.reset());
+});
