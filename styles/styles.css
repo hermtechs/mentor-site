@@ -1082,7 +1082,7 @@ footer{
 }
 footer .links{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     padding: 0.5rem;
     font-size: 0.2rem;
     font-weight: lighter;
@@ -1095,10 +1095,19 @@ footer a{
 }
 .copyright-text{
 /* background: #080924; */
-color: #eeee;
+color: rgba(189, 184, 184, 0.933);
 font-weight: lighter;
 text-align: center;
 padding: 0.5rem 1rem;
+}
+footer .links{
+  order: 1;
+ }
+@media(max-width:600px){
+footer{
+  display: block;
+}
+ 
 }
 
 /* footer */
